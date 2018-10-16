@@ -3,10 +3,15 @@
 import pandas as pd
 from sklearn import linear_model
 from sklearn.model_selection import train_test_split
+from matplotlib import pyplot
+
 
 def getPred(timeCharged):
     trainCsvData = pd.read_csv("https://s3.amazonaws.com/hr-testcases/399/assets/trainingdata.txt", sep=",",
                                names=['time_charged', 'battery_lasted'])
+    
+    pyplot.scatter(trainCsvData['time_charged'], trainCsvData['battery_lasted'])
+    pyplot.show()
 
     trainCsvData['time_charged'] = trainCsvData['time_charged']
     trainCsvData['battery_lasted'] = trainCsvData['battery_lasted']
