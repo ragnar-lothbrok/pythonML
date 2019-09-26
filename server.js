@@ -15,6 +15,6 @@ var server = http.createServer((req, res) =>{
     });
 });
 
-server.listen(80, () => {
-    console.log('Server started on port 80');
+server.listen(8080, () => {
+    console.log('Server started on port 8080');
 });
